@@ -32,5 +32,25 @@ function functionOnChange1( $filename, $mtime ) {
     }
 }
 
-
+function functionOnChange_Other ( $filename, $mtime ) {
+    // You may also use the same callback with different files
+    // You can decide what to do inside of your function
+    if( $filename == "/tmp/tracke/file2" ) {
+        // Do this
+    }
+    else { 
+        // Do that
+    }
+}
 ```
+
+## Return values / exceptions
+
+- The new constructor returns the filemonitor object
+- The addmonitor and removemonitor return nothing
+- addmonitor throws an exception, if the functionname does not exist in your program
+- check returns the number of changed files in the last turn
+
+
+
+
