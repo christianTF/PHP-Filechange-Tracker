@@ -49,6 +49,7 @@ function functionOnChange_Other ( $filename, $mtime ) {
 - The new constructor returns the filemonitor object
 - The addmonitor and removemonitor return nothing
 - addmonitor throws an exception, if the functionname does not exist in your program
+- addmonitor also accepts files that do not (yet) exist without warning
 - check returns the number of changed files in the last turn
 
 
