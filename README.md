@@ -44,13 +44,22 @@ function functionOnChange_Other ( $filename, $mtime ) {
 }
 ```
 
-## Return values / exceptions
+## Infos / Return values / exceptions
 
-- The new constructor returns the filemonitor object
-- The addmonitor and removemonitor return nothing
-- addmonitor throws an exception, if the functionname does not exist in your program
-- addmonitor also accepts files that do not (yet) exist without warning
-- check returns the number of changed files in the last turn
+- The `new` constructor returns the filemonitor object
+- The `addmonitor` and `removemonitor` methods return nothing
+- `addmonitor` throws an exception, if the `functionname` does not exist in your program
+- `addmonitor` also accepts files that do not (yet) exist without warning
+- The first `check` call always returns all files
+- `check` returns the number of changed files in the last turn
+
+### Callback function
+The parameters to your callback functions are
+- filename
+- modification time epoch
+
+The modification time is `false` if the file does not exist, otherwise it is the epoch modification timestamp of the file.
+
 
 
 
